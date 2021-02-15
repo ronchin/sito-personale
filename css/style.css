@@ -1,0 +1,718 @@
+@font-face {
+  font-family: "Aventa";
+  src: url("../assets/font/Aventa-Thin.woff2") format("woff2");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("../assets/font/Aventa-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("../assets/font/Aventa-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("../assets/font/Aventa-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("../assets/font/Aventa-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Aventa";
+  src: url("../assets/font/Aventa-Bold.woff2") format("woff2");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Lumen Script";
+  src: url("../assets/font/LumenScript-Bold.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  cursor: default;
+}
+
+html {
+  width: 100%;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Aventa", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  color: #000;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fffffa;
+}
+
+.c-scrollbar_thumb {
+  z-index: 1001;
+}
+
+/* ! Header */
+header {
+  position: fixed;
+  padding: 15px 0 0 15px;
+  top: 30px;
+  left: 15px;
+  width: 130px;
+  height: 180px;
+  color: #fff;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  border-radius: 25px;
+  z-index: 1000;
+}
+
+header .name {
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+header .name svg {
+  height: 40px;
+  width: auto;
+}
+
+header .name svg path {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .name svg path:hover {
+  fill: #85ffc7;
+}
+
+header .name:hover {
+  color: #85ffc7;
+}
+
+header nav {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+header nav ul {
+  position: relative;
+  left: 0px;
+  padding: 0;
+  list-style-type: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header nav ul li a {
+  color: #000;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: #85ffc7;
+}
+
+html[data-direction="down"] #menu {
+  left: -100px;
+}
+
+/* Menu di navigazione */
+.scroll {
+  position: fixed;
+  bottom: 78px;
+  left: -48px;
+  text-transform: uppercase;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: default;
+  z-index: 998;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.scroll:hover {
+  bottom: 85px;
+}
+
+.scroll:after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 2.5px;
+  background: #fff;
+  margin-left: 5px;
+  margin-bottom: 4px;
+}
+
+.testo-venezia {
+  position: absolute;
+  display: block;
+  width: 50vw;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 5.5rem;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  top: 95px;
+  right: 50px;
+}
+
+#scene {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.onda-bassa-venezia {
+  position: absolute;
+  width: 150vw;
+  height: 30vh;
+  background-image: url("../assets/img/onda-bassa-venezia-1.svg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  position: absolute;
+  top: 78vh !important;
+  left: -10vw !important;
+}
+
+.onda-media-venezia {
+  position: absolute;
+  width: 150vw;
+  height: 30vh;
+  background-image: url("../assets/img/onda-media-venezia.svg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  top: 65vh !important;
+  left: -10vw !important;
+}
+
+.onda-alta-venezia {
+  position: absolute;
+  width: 150vw;
+  height: 40vh;
+  background-image: url("../assets/img/onda-alta-venezia.svg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  top: 52vh !important;
+  left: -10vw !important;
+}
+
+.gondola {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-image: url("../assets/img/gondola-venezia.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 45vh !important;
+  left: 75vw !important;
+}
+
+.testo-port-venezia {
+  position: absolute;
+  font-family: "Lumen Script", "Aventa", sans-serif;
+  color: #85ffc7;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: capitalize;
+  top: 40vh !important;
+  left: 80vw !important;
+}
+
+/* ! Schermata principale */
+#sezioneUno {
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/img/bg-venezia.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+main .hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+main .hero .intro {
+  position: relative;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  z-index: 2;
+}
+
+main .hero .intro h1 {
+  position: relative;
+  color: #fff;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 10rem;
+  letter-spacing: -1px;
+  z-index: 4;
+}
+
+main .hero .intro h2 {
+  margin: 22px 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+main .hero .intro .ve-letter {
+  margin: 14px 0;
+}
+
+main .hero .intro .ve-letter span {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 10px;
+  background-color: #85ffc7;
+  margin: 14px 0;
+}
+
+main .hero .intro .ve-letter .ve-margin {
+  margin-top: 14px;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.subcover {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: -5px;
+}
+
+h3 {
+  font-weight: 800 !important;
+}
+
+#sezioneDue,
+#sezioneTre {
+  margin-top: 280px;
+}
+
+#sezioneDue .custom-p,
+#sezioneTre .custom-p {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+#sezioneDue .scroll-class,
+#sezioneTre .scroll-class {
+  opacity: 1;
+}
+
+#sezioneDue p,
+#sezioneTre p {
+  color: #000;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.custom-p a {
+  font-family: "Lumen Script", "Aventa", sans-serif;
+  color: #000;
+  font-size: 2.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-p a:hover {
+  color: #85ffc7;
+}
+
+.swiper-container {
+  margin-top: 48px;
+  padding: 0 16px;
+  width: 100%;
+  height: 50vh;
+  padding: 0 8px !important;
+  cursor: -webkit-grab !important;
+  cursor: grab !important;
+}
+
+.swiper-container:active {
+  cursor: -webkit-grabbing !important;
+  cursor: grabbing !important;
+}
+
+.swiper-container .swiper-slide {
+  position: relative;
+  background-color: #f86c5b;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.swiper-container .swiper-slide:active {
+  cursor: -webkit-grabbing !important;
+  cursor: grabbing !important;
+}
+
+.swiper-container .swiper-slide .box-1 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 37px;
+  background-color: #146858;
+}
+
+.swiper-container .swiper-slide .box-2 {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 37px;
+  background-color: #85ffc7;
+}
+
+.swiper-container .swiper-slide h4 {
+  font-size: 3.25rem;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  color: #fff;
+  text-align: center;
+}
+
+.swiper-container .swiper-slide a {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: 2.2px;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-container .swiper-slide a:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#sezioneAbout {
+  margin-top: 280px;
+}
+
+#sezioneAbout .row {
+  margin: 60px 0;
+}
+
+#sezioneAbout .row p {
+  color: #000;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+#sezioneContatti {
+  margin-top: 280px;
+  margin-bottom: 80px;
+}
+
+#sezioneContatti h4 {
+  font-weight: 800;
+}
+
+#sezioneContatti p {
+  color: #000;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+#sezioneContatti button a {
+  font-size: 1.75rem;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social a {
+  margin: 8px 0;
+  color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.social a:hover {
+  color: #85ffc7;
+}
+
+/* Portatile L */
+@media screen and (max-width: 1440px) {
+  /*Main section*/
+  h1 {
+    font-size: 8rem !important;
+  }
+  .testo-port-venezia {
+    font-size: 60px !important;
+    top: 46vh !important;
+    left: 78vw !important;
+  }
+}
+
+/* Portatile */
+@media screen and (max-width: 1024px) {
+  /*Main section*/
+  main .hero .intro h1 {
+    font-size: 6.5rem !important;
+  }
+  main .hero .intro h2 {
+    font-size: 2rem;
+  }
+  .testo-port-venezia {
+    font-size: 50px !important;
+    top: 48vh !important;
+    left: 70vw !important;
+  }
+  .gondola {
+    width: 350px;
+    top: 55vh !important;
+    left: 72vw !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main .hero .intro h1 {
+    font-size: 4.5rem !important;
+  }
+  .testo-venezia {
+    position: absolute;
+    display: block;
+    width: 83vw;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    top: 118px;
+    right: 10px;
+  }
+  .testo-port-venezia {
+    font-size: 50px !important;
+    top: 48vh !important;
+    left: 61vw !important;
+  }
+  #sezioneDue,
+  #sezioneTre,
+  #sezioneAbout,
+  #sezioneContatti {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /*  header*/
+  header {
+    top: 10px;
+    left: 10px;
+    padding: 10px 0 0 10px;
+  }
+  .testo-venezia {
+    width: 62vw;
+    font-size: 37px;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+  }
+  /*Main section*/
+  .intro {
+    top: -75px;
+  }
+  main .hero .intro h1 {
+    font-size: 3.75rem !important;
+  }
+  main .hero .intro h2 {
+    font-size: 1.85rem;
+  }
+  main .hero .intro .ve-letter span {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 7px;
+    background-color: #85ffc7;
+    margin: 9px 0;
+  }
+  /* Venezia ambiente*/
+  .testo-port-venezia {
+    font-size: 46px !important;
+    top: 55vh !important;
+    left: 52vw !important;
+  }
+  .gondola {
+    width: 322px;
+    top: 61vh !important;
+    left: 54vw !important;
+  }
+  .onda-alta-venezia {
+    top: 60vh !important;
+  }
+  .onda-media-venezia {
+    top: 71vh !important;
+  }
+  .onda-bassa-venezia {
+    top: 82vh !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /*Main section*/
+  main .hero .intro h1 {
+    font-size: 3rem !important;
+  }
+  /* Venezia ambiente*/
+  .testo-port-venezia {
+    font-size: 46px !important;
+    top: 55vh !important;
+    left: 50vw !important;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .swiper-container .swiper-slide h4 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    color: #fff;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
